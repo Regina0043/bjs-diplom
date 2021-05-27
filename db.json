@@ -6,7 +6,7 @@
       "password": "demo",
       "id": 1,
       "balance": {
-        "RUB": 1000,
+        "RUB": 1200,
         "USD": 20,
         "EUR": 20,
         "NTC": 3000
@@ -19,7 +19,7 @@
       "id": 2,
       "netocoins": 100,
       "balance": {
-        "RUB": 20,
+        "RUB": 120,
         "USD": 0,
         "EUR": 0,
         "NTC": 100
@@ -60,6 +60,66 @@
         "EUR": 600,
         "NTC": 90000
       }
+    },
+    {
+      "created_at": "2021-05-24T19:19:53.747Z",
+      "login": "hfjdf",
+      "password": "drhstjdtr",
+      "id": 6,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2021-05-25T12:15:31.385Z",
+      "login": "dhrtj",
+      "password": "dfdfh",
+      "id": 7,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2021-05-25T12:16:06.326Z",
+      "login": "fnfgn",
+      "password": "fgnfg",
+      "id": 8,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2021-05-25T12:16:40.416Z",
+      "login": "dfgdf",
+      "password": "dfdf",
+      "id": 9,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2021-05-25T12:23:03.020Z",
+      "login": "Regina",
+      "password": "1234",
+      "id": 10,
+      "balance": {
+        "RUB": 9900,
+        "USD": 136.10312261394213,
+        "EUR": 10000,
+        "NTC": 300
+      }
     }
   ],
   "favorites": {
@@ -78,6 +138,10 @@
       "1": "Важный пацан",
       "3": "Дедуля",
       "4": "Галя"
+    },
+    "10": {
+      "2": "Ваня",
+      "-1": "Роман"
     }
   }
 }

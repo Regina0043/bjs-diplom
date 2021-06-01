@@ -12,12 +12,8 @@ userForm.loginFormCallback = data => {
 
 		document.location.reload();
 	});
-
-
 	xhr.open('GET', 'package.json', true);
-
 	xhr.send();
-
 }
 
 userForm.registerFormCallback = data => {
@@ -31,10 +27,6 @@ userForm.registerFormCallback = data => {
 
 		document.location.reload();
 	});
-
-
 	xhr.open('GET', 'package.json', true);
-
 	xhr.send();
-
 }

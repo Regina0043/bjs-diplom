@@ -38,9 +38,7 @@ function getExchangeRates(){
 	xhr.send();
 }
 
-getExchangeRates();
-
-setInterval(getExchangeRates(), 60000);
+setInterval(getExchangeRates, 60000);
 
 const moneyManager = new MoneyManager();
 
@@ -52,7 +50,10 @@ moneyManager.addMoneyCallback = (data) =>{
 			moneyManager.setMessage(response.success,'Баланс успешно пополнен');
 		}
 
-		moneyManager.setMessage(response.success,response.error);
+		else{
+			moneyManager.setMessage(response.success,response.error);
+		}
+
 	});
 
 	xhr.open('GET', 'package.json', true);
@@ -68,7 +69,9 @@ moneyManager.conversionMoneyCallback = (data) =>{
 
 		}
 
-		moneyManager.setMessage(response.success, response.error);
+		else{
+			moneyManager.setMessage(response.success, response.error);
+		}
 	});
 
 	xhr.open('GET', 'package.json', true);
@@ -80,11 +83,14 @@ moneyManager.sendMoneyCallback = (data) =>{
 	xhr.onreadystatechange = ApiConnector.transferMoney(data, (response) =>{
 	if(response.success === true){
 			ProfileWidget.showProfile(response.data);
-			moneyManager.setMessage(response.success, 'Перевод успешно завершён');
+			moneyManager.setMessage(response.success, 'Перевод успешно совершён');
 
 		}
 
-		moneyManager.setMessage(response.success, response.error);
+		else{
+			moneyManager.setMessage(response.success, response.error);
+		}
+
 	});
 
 	xhr.open('GET', 'package.json', true);
@@ -113,10 +119,12 @@ favoritesWidget.addUserCallback = (data) =>{
 			favoritesWidget.clearTable();
 			favoritesWidget.fillTable(response.data);
 			moneyManager.updateUsersList(response.data);
-			moneyManager.setMessage(response.success, 'Пользователь успешно добавлен');
+			favoritesWidget.setMessage(response.success, 'Пользователь успешно добавлен');
 		}
 
-		moneyManager.setMessage(response.success, response.error);
+		else{
+			favoritesWidget.setMessage(response.success, response.error);
+		}
 	});
 }
 
@@ -128,10 +136,12 @@ favoritesWidget.removeUserCallback = (data) => {
 			favoritesWidget.clearTable();
 			favoritesWidget.fillTable(response.data);
 			moneyManager.updateUsersList(response.data);
-			moneyManager.setMessage(response.success, 'Пользователь успешно удалён');
+			favoritesWidget.setMessage(response.success, 'Пользователь успешно удалён');
 		}
 
-		moneyManager.setMessage(response.success, response.error);
+		else{
+			favoritesWidget.setMessage(response.success, response.error);
+		}
 	});
 
 }
